@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gauge="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_Po"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/descTxtPo"
+        android:text="@string/txt_po"
+        android:textColor="@color/colorGroup"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_transmitter" />
+
+    <TextView
+        android:id="@+id/txt_transmitter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/anthracite"
+        android:contentDescription="@string/descTxtPo"
+        android:text="@string/txt_transmitter"
+        android:textColor="@color/orangeRed"
+        android:textSize="26sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@+id/gauge" />
+
+    <TextView
+        android:id="@+id/txt_propagation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/anthracite"
+        android:contentDescription="@string/descTxtPo"
+        android:text="@string/txt_propagation"
+        android:textColor="@color/orangeRed"
+        android:textSize="26sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_transmitter_gain" />
+
+    <TextView
+        android:id="@+id/txt_recepcion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/anthracite"
+        android:contentDescription="@string/descTxtPo"
+        android:text="@string/txt_reception"
+        android:textColor="@color/orangeRed"
+        android:textSize="26sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_propagation_d" />
+
+    <TextView
+        android:id="@+id/txt_receptor_gain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/descTxtPo"
+        android:text="@string/txt_receptor_gain"
+        android:textColor="@color/colorGroup"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_recepcion" />
+
+    <TextView
+        android:id="@+id/txt_receptor_lm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/descTxtPo"
+        android:text="@string/txt_receptor_lm"
+        android:textColor="@color/colorGroup"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_receptor_loss"
+        app:layout_constraintTop_toTopOf="@+id/txt_receptor_loss" />
+
+    <TextView
+        android:id="@+id/txt_propagation_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/descTxtPo"
+        android:text="@string/txt_propagation_d"
+        android:textColor="@color/colorGroup"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_propagation" />
+
+    <TextView
+        android:id="@+id/txt_propagation_f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:contentDescription="@string/descTxtPo"
+        android:text="@string/txt_propagation_F"
+        android:textColor="@color/colorGroup"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_propagation_d"
+        app:layout_constraintTop_toTopOf="@+id/txt_propagation_d" />
+
+    <TextView
+        android:id="@+id/txt_propagation_FSL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/descTxtPo"
+        android:text="@string/txt_propagation_FSL"
+        android:textColor="@color/colorGroup"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/edt_propagation_f"
+        app:layout_constraintTop_toBottomOf="@+id/txt_propagation" />
+
+    <TextView
+        android:id="@+id/txt_transmitter_gain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/txt_transmitter_gain"
+        android:textColor="@color/colorGroup"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_transmitter_loss"
+        app:layout_constraintTop_toBottomOf="@+id/txt_transmitter" />
+
+    <TextView
+        android:id="@+id/txt_transmitter_loss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/txt_transmitter_loss"
+        android:textColor="@color/colorGroup"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/txt_transmitter_gain"
+        app:layout_constraintStart_toEndOf="@+id/txt_Po"
+        app:layout_constraintTop_toBottomOf="@+id/txt_transmitter" />
+
+    <TextView
+        android:id="@+id/txt_receptor_loss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/txt_receptor_loss"
+        android:textColor="@color/colorGroup"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_receptor_gain"
+        app:layout_constraintTop_toBottomOf="@+id/txt_recepcion" />
+
+    <EditText
+        android:id="@+id/edt_Po"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/edit_text_design"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_Po"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Po" />
+
+    <EditText
+        android:id="@+id/edt_transmitter_gain"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_design"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_transmitter_gain"
+        app:layout_constraintStart_toStartOf="@+id/txt_transmitter_gain"
+        app:layout_constraintTop_toBottomOf="@+id/txt_transmitter_gain" />
+
+    <EditText
+        android:id="@+id/edt_transmitter_loss"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_design"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_transmitter_loss"
+        app:layout_constraintStart_toStartOf="@+id/txt_transmitter_loss"
+        app:layout_constraintTop_toBottomOf="@+id/txt_transmitter_loss" />
+
+    <EditText
+        android:id="@+id/edt_propagation_d"
+        android:layout_width="80sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_design"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_propagation_d"
+        app:layout_constraintStart_toStartOf="@+id/txt_propagation_d"
+        app:layout_constraintTop_toBottomOf="@+id/txt_propagation_d" />
+
+    <EditText
+        android:id="@+id/edt_propagation_f"
+        android:layout_width="80sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_design"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_propagation_f"
+        app:layout_constraintStart_toStartOf="@+id/txt_propagation_f"
+        app:layout_constraintTop_toBottomOf="@+id/txt_propagation_f" />
+
+    <EditText
+        android:id="@+id/edt_receptor_gain"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_design"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_receptor_gain"
+        app:layout_constraintStart_toStartOf="@+id/txt_receptor_gain"
+        app:layout_constraintTop_toBottomOf="@+id/txt_receptor_gain" />
+
+    <EditText
+        android:id="@+id/edt_receptor_loss"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_design"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_receptor_loss"
+        app:layout_constraintStart_toStartOf="@+id/txt_receptor_loss"
+        app:layout_constraintTop_toBottomOf="@+id/txt_receptor_loss" />
+
+    <EditText
+        android:id="@+id/edt_receptor_lm"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_design"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_receptor_lm"
+        app:layout_constraintStart_toStartOf="@+id/txt_receptor_lm"
+        app:layout_constraintTop_toBottomOf="@+id/txt_receptor_lm" />
+
+    <de.nitri.gauge.Gauge
+        android:id="@+id/gauge"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        gauge:faceColor="@color/anthracite"
+        gauge:initialValue="-135"
+        gauge:lowerText="dBm"
+        gauge:maxValue="-50"
+        gauge:minValue="-140"
+        gauge:scaleColor="@color/orangeRed"
+        gauge:totalNicks="90"
+        gauge:valuePerNick="1" />
+</android.support.constraint.ConstraintLayout>

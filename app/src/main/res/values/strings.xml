@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Microwave - Budget Calculator</string>
+    <string name="descTxtPo">Energía de salida del transmisor.</string>
+    <string name="txt_title_text">Microwave - Budget Calculator</string>
+    <string name="txt_transmitter">Transmisor</string>
+    <string name="txt_propagation">Propagación</string>
+    <string name="txt_po">Po (dBm)</string>
+    <string name="txt_reception">Recepción</string>
+    <string name="txt_receptor_gain">Gatx (dBi)</string>
+    <string name="txt_propagation_FSL">"FSPL (dB) = "</string>
+    <string name="txt_transmitter_loss">Lctx (dB)</string>
+    <string name="txt_transmitter_gain">Gatx (dBi)</string>
+    <string name="txt_receptor_loss">Lctx (dB)</string>
+    <string name="btn_calc">CALCULAR</string>
+    <string name="txt_receptor_lm">Lm</string>
+    <string name="txt_propagation_d">D</string>
+    <string name="txt_propagation_F">F</string>
+</resources>
