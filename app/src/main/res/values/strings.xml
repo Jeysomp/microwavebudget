@@ -7,12 +7,12 @@
     <string name="txt_po">Po (dBm)</string>
     <string name="txt_reception">Recepción</string>
     <string name="txt_receptor_gain">Gatx (dBi)</string>
-    <string name="txt_propagation_FSL">"FSPL (dB) = "</string>
+    <string name="txt_propagation_FSL">"FSPL(dB)="</string>
     <string name="txt_transmitter_loss">Lctx (dB)</string>
     <string name="txt_transmitter_gain">Gatx (dBi)</string>
     <string name="txt_receptor_loss">Lctx (dB)</string>
     <string name="btn_calc">CALCULAR</string>
-    <string name="txt_receptor_lm">Lm</string>
-    <string name="txt_propagation_d">D</string>
-    <string name="txt_propagation_F">F</string>
+    <string name="txt_receptor_lm">Lm (dB)</string>
+    <string name="txt_propagation_d">D (Km)</string>
+    <string name="txt_propagation_F">F (GHz)</string>
 </resources>

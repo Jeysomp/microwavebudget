@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
     double lBudget = 0;
 
+    public static final int MAX_VALUE = 20;
+    public static final int MIN_VALUE = -180;
     Gauge gauge;
     int currentValue;
 
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         gauge = findViewById(R.id.gauge);
-        currentValue = -135;
+        currentValue = 0;
         gauge.setValue(currentValue);
 
         FSPL = 0;
@@ -76,19 +78,19 @@ public class MainActivity extends AppCompatActivity {
         if ((propagationD == 0) || (propagationF == 0)) {
             FSPL = 0;
         } else {
-            FSPL = (20 * Math.log10(propagationD)) + (20 * Math.log10(propagationF)) + 32.44;
+            FSPL = (20 * Math.log10(propagationD)) + (20 * Math.log10(propagationF)) + 92.45;
         }
-        txtPropagationFSL.setText(String.format("FSL (dB) = %.2f", FSPL));
+        txtPropagationFSL.setText(String.format("FSPL(dB)= %.2f", FSPL));
 
         lBudget = transmitterPo + transmitterGain - transmitterLoss - FSPL - receptorLm
                     + receptorGain - receptorLoss;
         Log.d("calcLinkBudget", String.format("El valor de LBudget = %.2f", lBudget));
 
         BigDecimal bigDecimal = new BigDecimal(String.valueOf(lBudget));
-        if (lBudget < -140) {
-            currentValue = -140;
-        } else if (lBudget > -50) {
-            currentValue = -50;
+        if (lBudget < MIN_VALUE) {
+            currentValue = MIN_VALUE;
+        } else if (lBudget > MAX_VALUE) {
+            currentValue = MAX_VALUE;
         } else {
             currentValue = bigDecimal.intValue();
         }
@@ -99,16 +101,16 @@ public class MainActivity extends AppCompatActivity {
 
     private class EditTextChangeListener{
         EditText editText;
-        public static final int EDT_TRANSMITTER_P0 = 10;
-        public static final int EDT_TRANSMITTER_GAIN = 11;
-        public static final int EDT_TRANSMITTER_LOSS = 12;
+        static final int EDT_TRANSMITTER_P0 = 10;
+        static final int EDT_TRANSMITTER_GAIN = 11;
+        static final int EDT_TRANSMITTER_LOSS = 12;
 
-        public static final int EDT_PROPAGATION_D = 20;
-        public static final int EDT_PROPAGATION_F = 21;
+        static final int EDT_PROPAGATION_D = 20;
+        static final int EDT_PROPAGATION_F = 21;
 
-        public static final int EDT_RECEPTOR_GAIN = 30;
-        public static final int EDT_RECEPTOR_LOSS = 31;
-        public static final int EDT_RECEPTOR_LM = 32;
+        static final int EDT_RECEPTOR_GAIN = 30;
+        static final int EDT_RECEPTOR_LOSS = 31;
+        static final int EDT_RECEPTOR_LM = 32;
 
         public EditTextChangeListener(EditText editText, final int codigoEditor){
             this.editText = editText;
