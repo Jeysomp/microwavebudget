@@ -29,7 +29,7 @@
         android:contentDescription="@string/descTxtPo"
         android:text="@string/txt_transmitter"
         android:textColor="@color/orangeRed"
-        android:textSize="26sp"
+        android:textSize="25sp"
         android:textStyle="bold|italic"
         app:layout_constraintTop_toBottomOf="@+id/gauge" />
 
@@ -42,7 +42,7 @@
         android:contentDescription="@string/descTxtPo"
         android:text="@string/txt_propagation"
         android:textColor="@color/orangeRed"
-        android:textSize="26sp"
+        android:textSize="25sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,7 @@
         android:contentDescription="@string/descTxtPo"
         android:text="@string/txt_reception"
         android:textColor="@color/orangeRed"
-        android:textSize="26sp"
+        android:textSize="25sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,6 +75,37 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_recepcion" />
+
+    <TextView
+        android:id="@+id/txt_margen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="82dp"
+        android:contentDescription="@string/descTxtPo"
+        android:text="@string/txt_margen"
+        android:textColor="@color/colorGroup"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        gauge:layout_constraintStart_toStartOf="parent"
+        gauge:layout_constraintTop_toBottomOf="@+id/txt_recepcion" />
+
+    <EditText
+        android:id="@+id/edt_margen"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/edit_text_design"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_receptor_loss"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txt_margen"
+        app:layout_constraintTop_toBottomOf="@+id/txt_receptor_loss" />
 
     <TextView
         android:id="@+id/txt_receptor_lm"
@@ -288,10 +319,10 @@
     <de.nitri.gauge.Gauge
         android:id="@+id/gauge"
         android:layout_width="0dp"
-        android:layout_height="250dp"
+        android:layout_height="220dp"
         android:layout_gravity="center"
-        android:layout_marginStart="72dp"
-        android:layout_marginEnd="72dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="90dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -4,15 +4,16 @@
     <string name="txt_title_text">Microwave - Budget Calculator</string>
     <string name="txt_transmitter">Transmisor</string>
     <string name="txt_propagation">Propagación</string>
-    <string name="txt_po">Po (dBm)</string>
+    <string name="txt_po">Ptx (dBm)</string>
     <string name="txt_reception">Recepción</string>
-    <string name="txt_receptor_gain">Gatx (dBi)</string>
+    <string name="txt_receptor_gain">Grx (dBi)</string>
     <string name="txt_propagation_FSL">"FSPL(dB)="</string>
-    <string name="txt_transmitter_loss">Lctx (dB)</string>
-    <string name="txt_transmitter_gain">Gatx (dBi)</string>
-    <string name="txt_receptor_loss">Lctx (dB)</string>
+    <string name="txt_transmitter_loss">Ltx (dB)</string>
+    <string name="txt_transmitter_gain">Gtx (dBi)</string>
+    <string name="txt_receptor_loss">Lrx (dB)</string>
     <string name="btn_calc">CALCULAR</string>
     <string name="txt_receptor_lm">Lm (dB)</string>
     <string name="txt_propagation_d">D (Km)</string>
     <string name="txt_propagation_F">F (GHz)</string>
+    <string name="txt_margen">Margen de presupuesto</string>
 </resources>

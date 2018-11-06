@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     int receptorGain = 0;
     int receptorLoss = 0;
     int receptorLm = 0;
+    int margen = 0;
 
     double lBudget = 0;
 
@@ -72,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
         EditText edtReceptorLm = findViewById(R.id.edt_receptor_lm);
         EditTextChangeListener edtRLm_Listener = new EditTextChangeListener(edtReceptorLm, EditTextChangeListener.EDT_RECEPTOR_LM);
 
+        EditText edtMargen = findViewById(R.id.edt_margen);
+        EditTextChangeListener edtMargen_Listener = new EditTextChangeListener(edtMargen, EditTextChangeListener.EDT_MARGEN);
     }
 
     private void calcLinkBudget(){
@@ -83,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         txtPropagationFSL.setText(String.format("FSPL(dB)= %.2f", FSPL));
 
         lBudget = transmitterPo + transmitterGain - transmitterLoss - FSPL - receptorLm
-                    + receptorGain - receptorLoss;
+                    + receptorGain - receptorLoss - margen;
         Log.d("calcLinkBudget", String.format("El valor de LBudget = %.2f", lBudget));
 
         BigDecimal bigDecimal = new BigDecimal(String.valueOf(lBudget));
@@ -111,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         static final int EDT_RECEPTOR_GAIN = 30;
         static final int EDT_RECEPTOR_LOSS = 31;
         static final int EDT_RECEPTOR_LM = 32;
+        static final int EDT_MARGEN = 40;
 
         public EditTextChangeListener(EditText editText, final int codigoEditor){
             this.editText = editText;
@@ -130,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
                             case EDT_RECEPTOR_GAIN: receptorGain = 0; break;
                             case EDT_RECEPTOR_LOSS: receptorLoss = 0; break;
                             case EDT_RECEPTOR_LM: receptorLm = 0; break;
+                            case EDT_MARGEN: margen = 0; break;
                         }
                     } else {
                         BigDecimal valor;
@@ -162,6 +167,9 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case EDT_RECEPTOR_LM:
                                 receptorLm = valor.toBigInteger().intValue();
+                                break;
+                            case EDT_MARGEN:
+                                margen = valor.toBigInteger().intValue();
                                 break;
                         }
                     }
